@@ -6,7 +6,6 @@ mymodule.welcome:
   requirements:
     _permission: 'access content'
 
-
 mymodule.name:
   path: '/welcome'
   defaults:
@@ -14,7 +13,6 @@ mymodule.name:
     _title: 'Welcome'
   requirements:
     _permission: 'access content'
-
 
 mymodule.getname:
   path: '/welcome/{name}'

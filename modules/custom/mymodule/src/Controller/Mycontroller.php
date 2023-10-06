@@ -15,15 +15,18 @@ class Mycontroller extends ControllerBase
 
     protected $data;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->data = \Drupal::service('mymodule.custom_services')->getGreeting();
     }
 
-    public function Demo() {
+    public function Demo()
+    {
         return new Response($this->data);
     }
 
-    public function getName() {
+    public function getName()
+    {
         $result = 'Hello World!';
         return [
             '#type' => 'markup',
@@ -31,7 +34,8 @@ class Mycontroller extends ControllerBase
         ];
     }
 
-    public function getDisplayName($name) {
+    public function getDisplayName($name)
+    {
         return [
             '#type' => 'markup',
             '#markup' => 'Welcome ' . $name . ' ' . $this->data,

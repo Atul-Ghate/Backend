@@ -15,21 +15,6 @@ class CustomService {
    * @return string
    *   The greeting message.
    */
-  // public function getGreeting() {
-  //   $current_time = \Drupal::time()->getCurrentTime();
-  //   $hour = date('G', $current_time);
-
-  //   if ($hour >= 6 && $hour < 12) {
-  //     return 'Good Morning';
-  //   } elseif ($hour >= 12 && $hour < 16) {
-  //     return 'Good Afternoon';
-  //   } elseif ($hour >= 17 && $hour < 21) {
-  //     return 'Good Evening';
-  //   } else {
-  //     return 'Good Night';
-  //   }
-
-  // }
 
   public function getGreeting() {
     $config = \Drupal::config('mymodule.settings');
@@ -52,23 +37,7 @@ class CustomService {
     } else {
       return $greeting_message_night;
     }
-    // Determine the greeting message based on the time setting.
-    // if ($time_of_day === 'morning') {
-    //   return 'Good Morning, ' . $greeting_message_morning;
-    // } elseif ($time_of_day === 'afternoon') {
-    //   return 'Good Afternoon, ' . $greeting_message_noon;
-    // } elseif ($time_of_day === 'evening') {
-    //   return 'Good Evening, ' . $greeting_message_;
-    // } elseif ($time_of_day === 'night') {
-    //   return 'Good Night, ' . $greeting_message;
-    // } else {
-    //   return 'Unknown Time of Day, ' . $greeting_message;
-    // }
+
   }
 
 }
-
-
-//6 am to 12 am = morning
-//12 pm to 4 pm = noon
-// 4 pm to 9 pm = eveining
