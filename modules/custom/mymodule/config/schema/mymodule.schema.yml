@@ -1,0 +1,16 @@
+mymodule.settings:
+  type: mapping
+  label: 'My Module Settings'
+  mapping:
+    greeting_message_morning:
+      type: string
+      label: 'Greeting Message'
+    greeting_message_noon:
+      type: string
+      label: 'Greeting Message'
+    greeting_message_evening:
+      type: string
+      label: 'Greeting Message'
+    greeting_message_night:
+      type: string
+      label: 'Greeting Message'

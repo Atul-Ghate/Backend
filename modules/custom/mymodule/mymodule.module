@@ -1,0 +1,25 @@
+<?php
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_node_view() to count node views.
+ */
+function mymodule_node_view(array &$build, NodeInterface $node, $display, $view_mode) {
+  if ($node->bundle() === 'article') {
+    // Check if the node has been viewed during this session.
+    if (!isset($_SESSION['custom_node_views'][$node->id()])) {
+      // Increment the view count for the node.
+      $_SESSION['custom_node_views'][$node->id()] = TRUE;
+
+      // Get the current view count or initialize it to 0.
+      $view_count = \Drupal::state()->get('custom_node_views_count_' . $node->id(), 0);
+
+      // Increment the view count.
+      $view_count++;
+
+      // Save the updated view count.
+      \Drupal::state()->set('custom_node_views_count_' . $node->id(), $view_count);
+
+    }
+  }
+}
