@@ -1,0 +1,15 @@
+custom_api.content:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\custom_api\Controller\GetData::getData'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+custom_api.demo:
+  path: '/test'
+  defaults:
+    _controller: '\Drupal\custom_api\Controller\GetData::Demo'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'

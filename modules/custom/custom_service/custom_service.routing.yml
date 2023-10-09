@@ -1,0 +1,26 @@
+custom_service.welcome:
+  path: '/welcome'
+  defaults:
+    _controller: '\Drupal\custom_service\Controller\DisplayName::getName'
+    _title: 'Welcome'
+  requirements:
+    _permission: 'access content'
+
+
+custom_service.getname:
+  path: '/welcome/{name}'
+  defaults:
+    _controller: '\Drupal\custom_service\Controller\DisplayName::getDisplayName'
+    _title: 'Welcome'
+  requirements:
+    _permission: 'access content'
+
+
+custom_service.test:
+  path: '/welcome/demo'
+  defaults:
+    _controller: '\Drupal\custom_service\Controller\DisplayName::someMethod'
+    _title: 'Welcome'
+  requirements:
+    _permission: 'access content'
+

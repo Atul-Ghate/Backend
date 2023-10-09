@@ -29,3 +29,11 @@ mymodule.settings_form:
     _title: 'My Module Configuration'
   requirements:
     _permission: 'administer site configuration'
+
+mymodule.count:
+  path: '/count'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\Mycontroller::showViewCount'
+    _title: 'Welcome'
+  requirements:
+    _permission: 'access content'

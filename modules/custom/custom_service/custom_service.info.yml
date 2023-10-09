@@ -1,0 +1,7 @@
+name: custom service
+type: module
+description: Allows users to display name.
+core_version_requirement: ^9 || ^10
+autoload:
+  psr-4:
+    Drupal\custom_service: src/

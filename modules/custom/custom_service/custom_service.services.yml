@@ -1,0 +1,6 @@
+services:
+  custom_service.test:
+    class: Drupal\custom_service\Service\GetTimeService
+    arguments: []
+  custom_service.demo:
+    class: Drupal\custom_service\HelloServices

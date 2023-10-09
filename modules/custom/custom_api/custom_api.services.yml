@@ -1,0 +1,3 @@
+services:
+ custom_api.test:
+   class: Drupal\custom_api\HelloService
