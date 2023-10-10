@@ -1,0 +1,16 @@
+weather_settings.settings:
+  type: config_object
+  label: 'Weather Settings'
+  mapping:
+    api_key:
+      type: text
+      label: 'API Key'
+    country:
+      type: text
+      label: 'Country'
+    city:
+      type: text
+      label: 'City'
+    api_endpoint:
+      type: text
+      label: 'api_endpoint'

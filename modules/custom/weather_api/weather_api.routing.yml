@@ -1,0 +1,7 @@
+weather_api.settings_form:
+  path: '/weather'
+  defaults:
+    _form: '\Drupal\weather_api\Form\WeatherConfigForm'
+    _title: 'My Module Configuration'
+  requirements:
+    _permission: 'administer site configuration'
